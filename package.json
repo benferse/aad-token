@@ -2,8 +2,10 @@
   "name": "aad-token",
   "version": "0.0.1",
   "description": "Fetch an access token from an Azure Active Directory tenant",
-  "main": "app.js",
+  "main": "out/app.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node out/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

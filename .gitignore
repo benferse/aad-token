@@ -87,3 +87,6 @@ typings/
 
 # Ignore the config file that contains secrets
 tenantInfo.json
+
+# Ignore compiled js
+out/*.js
