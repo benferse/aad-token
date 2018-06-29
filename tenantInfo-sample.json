@@ -1,0 +1,6 @@
+{
+    "tenantId": "GUID of your AAD tenant",
+    "clientId": "Your application's client ID",
+    "clientSecret": "Your application's client secret",
+    "resource": "The URI for the resource you want to access"
+}
