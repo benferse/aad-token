@@ -5,7 +5,7 @@
   "main": "out/app.js",
   "scripts": {
     "build": "tsc",
-    "start": "node app/main.js",
+    "start": "node out/app/main.js",
     "test": "ava --verbose"
   },
   "repository": {
