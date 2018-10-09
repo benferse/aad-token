@@ -24,6 +24,8 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "adal-node": "^0.1.28"
+    "@types/command-line-args": "^5.0.0",
+    "adal-node": "^0.1.28",
+    "command-line-args": "^5.0.2"
   }
 }

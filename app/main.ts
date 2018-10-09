@@ -1,5 +1,6 @@
-import fs = require('fs');
 import {AuthenticationContext, ErrorResponse, TokenResponse} from 'adal-node';
+import cli from 'command-line-args';
+import fs from 'fs';
 
 class TenantInfo {
     tenantId: string = "";
@@ -7,6 +8,23 @@ class TenantInfo {
     clientSecret: string = "";
     resource: string = "";
 };
+
+function handleRenewal(token: string) {
+
+}
+
+function handleArgs(token: string) {
+
+    const cliOptions = [
+        { name: "renew", alias: "r", type: Boolean },
+    ]
+
+    const options = cli(cliOptions);
+
+    if (options.renew) {
+        handleRenewal(token);
+    }
+}
 
 function onAuthComplete(err: Error, resp: ErrorResponse | TokenResponse) {
 
@@ -16,6 +34,8 @@ function onAuthComplete(err: Error, resp: ErrorResponse | TokenResponse) {
     } else {
         const tokenResp: TokenResponse = resp as TokenResponse;
         console.log(tokenResp.accessToken);
+
+        handleArgs(tokenResp.accessToken);
     }
 }
 
