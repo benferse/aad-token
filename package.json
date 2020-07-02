@@ -20,7 +20,6 @@
   "homepage": "https://github.com/benferse/aad-token#readme",
   "devDependencies": {
     "@types/node": "^10.5.1",
-    "ava": "1.0.0-beta.6",
     "typescript": "^2.9.2"
   },
   "dependencies": {
